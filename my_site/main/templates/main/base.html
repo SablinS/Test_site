@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = "ru">
+    <head>
+        {%load static%}
+        <link rel="stylesheet" href="{%static 'main/css/home.css'%}">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <img src="https://avatars.mds.yandex.net/i?id=576303378e29c276316831f7441c2dbea18b794ee6955b67-4363827-images-thumbs&n=13" >
+            <nav>
+                <ul>
+                    <li><button ><a href="/">Главная</a></button></li>
+                    <li><button ><a href="/info/">О нас</a></button></li>
+                    <li><button ><a href="/cont/">Контакты</a></button></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <article>
+            {%block content%}{%endblock%}
+            </article>
+            <aside>
+                    <button ><a href="/seasons/">Все серии</a></button>
+            </aside>
+        </main>
+        <footer>
+            <p>2024</p>
+        </footer>   
+    </body>
+</html>

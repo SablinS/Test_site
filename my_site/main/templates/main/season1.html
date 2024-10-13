@@ -1,0 +1,10 @@
+{%extends 'main/base.html'%}
+{%block content%}
+{% for episode in season %}
+<div class="episode-card">
+    <h2>{{ episode.title }}</h2>
+    <a href="{{episode.link}}">{{ episode.title }}</a>
+    <p>{{ episode.description }}</p>
+</div>
+{% endfor %}
+{%endblock%}
