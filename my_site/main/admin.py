@@ -8,4 +8,4 @@ from .models import Episode
 
 @admin.register(Episode)
 class EpisodeAdmin(admin.ModelAdmin):
-    list_display = ('title', 'link', 'description')
+    list_display = ('preview','episode_number', 'season_number', 'link', 'description')

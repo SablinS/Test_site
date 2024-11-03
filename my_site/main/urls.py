@@ -5,8 +5,8 @@ urlpatterns = [
 path('', views.home),
 path('info/', views.info),
 path('cont/', views.cont),
-path('seasons/', views.seasons),
-path('seasons/1/', views.s1),
-path('seasons/2/', views.s2),
-path('seasons/3/', views.s3),
+path('episode/', views.episode),
+path('season1/', views.season1),
+path('season2/', views.season2),
+path('season3/', views.season3),
 ]

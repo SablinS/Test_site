@@ -6,11 +6,16 @@ from .models import Episode
 def home(request): return render(request, "main/home.html")
 def info(request): return render(request, "main/info.html")
 def cont(request): return render(request, "main/cont.html")
-def seasons(request): return render(request, "main/seasons.html")
-def s1(request): 
+def episode(request): 
     season = Episode.objects.all()
-    return render(request, "main/season1.html", {"season":season})
-def s2(request): return render(request, "main/season2.html")
-def s3(request): return render(request, "main/season3.html")
-
+    return render(request, "main/episode.html", {"season":season})
+def season1(request): 
+    season = Episode.objects.filter(season_number = 1)
+    return render(request, "main/episode.html", {"season":season})
+def season2(request): 
+    season = Episode.objects.filter(season_number = 2)
+    return render(request, "main/episode.html", {"season":season})
+def season3(request): 
+    season = Episode.objects.filter(season_number = 3)
+    return render(request, "main/episode.html", {"season":season})
 
