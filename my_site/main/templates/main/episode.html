@@ -1,16 +1,18 @@
 {%extends 'main/base.html'%}
 {%block content%}
 {% for episode in season %}
+<div class="episode-card">  
     {% if episode.preview %}
-        <img  scr = "{{episode.preview.url}}", style ="width: auto;height: auto;">
+        <img  src = "{{episode.preview.url}}", style ="width: 40%;height: auto;">
     {% else %}
         <p>.</p>
     {% endif %}
-<div class="episode-card">
-    <h2>{{ episode.episode_number}}</h2>
-    <h2>{{ episode.season_number}}</h2>
-    <a href="{{episode.link}}">{{ episode.episode_number}}</a>
-    <p>{{ episode.description }}</p>
+    <aside class="inf">
+        <h2>{{ episode.episode_number}}</h2>
+        <h2>{{ episode.season_number}}</h2>
+        <a href="{{episode.link}}">{{ episode.episode_number}}</a>
+        <p>{{ episode.description }}</p>
+    </aside>
 </div>
 {% endfor %}
 {%endblock%}
