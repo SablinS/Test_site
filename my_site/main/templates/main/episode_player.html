@@ -1,7 +1,6 @@
 {%extends 'main/base.html'%}
 {%block content%}
 <video width="620" height="315" controls>
-{%load static%}
-<source src="{% static '{{ video.link }}' %}" type="video/mp4">
+<source src="{{ video.link.url }}" type="video/mp4">
 </video>
 {%endblock%}

@@ -22,9 +22,10 @@
             </article>
             <aside>
                     <button ><a href="/episode/">Все серии</a></button>
-                    <button ><a href="/season1/">Cезон1</a></button>
-                    <button ><a href="/season2/">Cезон2</a></button>
-                    <button ><a href="/season3/">Cезон3</a></button>
+                    <button ><a href="/rand_ep/">Рандомная серия</a></button>                       
+                    {% for s in seasons %}
+                    <button ><a href="/season/{{s.season_number}}/">Cезон{{s.season_number}}</a></button>
+                    {% endfor %}
             </aside>
         </main>
         <footer>

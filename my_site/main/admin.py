@@ -4,7 +4,7 @@ from django.contrib import admin
 
 # admin.py
 from django.contrib import admin
-from .models import Episode, Video
+from .models import Episode, Video, Season
 
 @admin.register(Episode)
 class EpisodeAdmin(admin.ModelAdmin):
@@ -13,3 +13,8 @@ class EpisodeAdmin(admin.ModelAdmin):
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin):
     list_display = ('episode_number', 'season_number', 'link')
+
+@admin.register(Season)
+class SeasonAdmin(admin.ModelAdmin):
+    list_display = ('season_number',)
+    

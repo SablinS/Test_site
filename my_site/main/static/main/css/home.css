@@ -41,7 +41,9 @@
   }
   
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
     text-align: center;
   }
   
@@ -147,4 +149,23 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-bottom: 10px;
+    transition: grid-template-columns 0.5s 0s;
   }
+
+  .episode-card:hover{
+    grid-template-columns: 2fr 1fr;
+  }
+
+.card_title{
+  font-size: 2.5rem;
+  display: inline-block;
+  font-family: Arial;
+}
+
+
+.card_cont{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
